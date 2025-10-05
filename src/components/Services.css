@@ -1,0 +1,257 @@
+.services {
+  padding: 100px 0;
+  background: white;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e91e63;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(233, 30, 99, 0.15);
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+
+.service-features li {
+  padding: 8px 0;
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.service-btn {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+}
+
+.services-cta {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  color: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.services-cta h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.services-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-buttons .btn {
+  background: white;
+  color: #e91e63;
+  font-weight: 600;
+}
+
+.cta-buttons .btn:hover {
+  background: #f8f8f8;
+  transform: translateY(-2px);
+}
+
+.cta-buttons .btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-buttons .btn-outline:hover {
+  background: white;
+  color: #e91e63;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+  
+  .service-card {
+    padding: 30px 20px;
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+  }
+  
+  .service-title {
+    font-size: 1.3rem;
+  }
+  
+  .services-cta {
+    padding: 40px 20px;
+  }
+  
+  .services-cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .service-card {
+    padding: 25px 15px;
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+  }
+  
+  .service-title {
+    font-size: 1.2rem;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+  }
+  
+  .services-cta {
+    padding: 30px 15px;
+  }
+  
+  .services-cta h3 {
+    font-size: 1.3rem;
+  }
+  
+  .services-cta p {
+    font-size: 1rem;
+  }
+}

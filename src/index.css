@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e91e63;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2185b;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #e91e63;
+  color: #e91e63;
+}
+
+.btn-outline:hover {
+  background: #e91e63;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
+  }
+}
