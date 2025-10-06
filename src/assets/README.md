@@ -30,3 +30,10 @@ This directory contains all the images and media files for the DHARITHRI website
 - Placeholder images are currently using Unsplash URLs
 - Replace with your actual facility photos
 - Update the image URLs in the Facilities component
+
+## Brand Logo
+
+- Place your brand SVG logo at: `src/assets/logo.svg`
+- The header already imports this path. After placing it, the logo will appear to the left of the DHARITHRI text automatically.
+- Recommended canvas size: 256x256 or wider horizontal layout
+- Ensure the SVG has no external fonts or raster images for best scaling

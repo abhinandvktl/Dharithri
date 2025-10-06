@@ -17,24 +17,15 @@ const Hero = () => {
       <div className="container">
         <div className={`hero-content ${isVisible ? 'animate-fadeInUp' : ''}`}>
           <h1 className="hero-title">
-            Welcome to <span className="highlight">DHARITHRI</span>
+            Heal and bond with Dharithri
           </h1>
           <p className="hero-subtitle">
-            Premium Postnatal Care for New Mothers and Newborn Babies
+            Premium Postnatal Care for Mothers and Newborn Babies
           </p>
           <p className="hero-description">
             Experience compassionate, professional care in a warm, nurturing environment 
             designed specifically for new mothers and their precious little ones.
           </p>
-          
-          <div className="hero-actions">
-            <button className="btn btn-primary animate-pulse">
-              Book Your Stay
-            </button>
-            <button className="btn btn-outline">
-              Learn More
-            </button>
-          </div>
         </div>
         
         <div className={`hero-stats ${isVisible ? 'animate-fadeInUp' : ''}`}>
@@ -43,8 +34,8 @@ const Hero = () => {
             <p>Happy Families</p>
           </div>
           <div className="stat-item">
-            <h3>15+</h3>
-            <p>Years Experience</p>
+            <h3>Certified</h3>
+            <p>Care Team</p>
           </div>
           <div className="stat-item">
             <h3>24/7</h3>

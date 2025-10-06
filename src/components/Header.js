@@ -26,9 +26,12 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="nav-wrapper">
-          <div className="logo">
-            <h2>DHARITHRI</h2>
-            <span>Postnatal Care</span>
+          <div className="logo" aria-label="DHARITHRI brand">
+            <img src="/logo.svg" alt="DHARITHRI logo" className="logo-image" />
+            <div className="logo-text">
+              <h2>DHARITHRI</h2>
+              <span>Postnatal Care</span>
+            </div>
           </div>
           
           <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
