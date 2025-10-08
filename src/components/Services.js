@@ -24,40 +24,34 @@ const Services = () => {
 
   const services = [
     {
-      icon: "🤱",
-      title: "Newborn Care",
-      description: "Expert care for your precious newborn with specialized attention to feeding, sleeping, and developmental milestones.",
-      features: ["Feeding support", "Sleep guidance", "Health monitoring", "Growth tracking"]
+      icon: "💆‍♀️",
+      title: "തൈലം മസാജ്",
+      description: "ശാരീരികവും മാനസികമായി പുനരുജ്ജീവനം ലഭ്യമാക്കുന്ന പ്രത്യേക എണ്ണമസാജ്",
+      features: ["അമ്മമാർക്കായി പ്രത്യേക രീതികൾ", "മാംസപേശി ശമനം", "വേദന കുറവ്", "ശാന്തമായ ഉറക്കം"]
     },
     {
-      icon: "👩‍⚕️",
-      title: "Mother's Recovery",
-      description: "Comprehensive postnatal care for new mothers including physical recovery, emotional support, and wellness guidance.",
-      features: ["Physical recovery", "Emotional support", "Nutrition guidance", "Exercise programs"]
+      icon: "🥗",
+      title: "ഡയറ്റ് (ആഹാരപദ്ധതി)",
+      description: "ശരീര പുനർനിർമാണത്തിനും മുലയൂട്ടലിനും അനുയോജ്യമായ പോഷകാഹാര മാർഗ്ഗനിർദ്ദേശം",
+      features: ["വ്യക്തിഗത പ്ലാൻ", "ആയുർവേദ അടിസ്ഥാനത്തിൽ", "ഡിറ്റോക്സ് & പോഷണം", "ദൈനംദിന മേൽനോട്ടം"]
     },
     {
-      icon: "🍼",
-      title: "Feeding Support",
-      description: "Professional lactation support and feeding guidance to ensure both mother and baby thrive during feeding journey.",
-      features: ["Lactation support", "Bottle feeding", "Feeding schedules", "Nutrition advice"]
+      icon: "🌿",
+      title: "ആയുർവേദ ചികിത്സകൾ",
+      description: "ആയുർവേദശാസ്ത്രത്തിന്റെ അടിസ്ഥാനത്തിൽ സുരക്ഷിതവും ഫലപ്രദവുമായ ചികിത്സകൾ",
+      features: ["പരിചയസമ്പന്നരായ വിദഗ്ധർ", "ശരീര-മനസ്സ് സാന്ത്വനം", "ഹോർമോൺ ബാലൻസ്", "ആരോഗ്യ പുനരുജ്ജീവനം"]
     },
     {
-      icon: "🏠",
-      title: "Family Bonding",
-      description: "Facilitate precious bonding moments between family members in a supportive, nurturing environment.",
-      features: ["Bonding activities", "Family time", "Photo sessions", "Memory making"]
+      icon: "🧘‍♀️",
+      title: "യോഗ പരിശീലനം",
+      description: "മൃദുവായ യോഗവും ശ്വാസ വ്യായാമങ്ങളും വഴി ശരീര-മനസ്സ് സമതുലനം",
+      features: ["ശ്വാസാഭ്യാസം", "മൃദുവായ സ്‌ട്രെച്ചുകൾ", "ഭംഗി & ബാലൻസ്", "ആത്മവിശ്വാസ വർധനം"]
     },
     {
-      icon: "📚",
-      title: "Education & Training",
-      description: "Comprehensive education for new parents on baby care, safety, and development milestones.",
-      features: ["Parenting classes", "Safety training", "Development guidance", "Resource materials"]
-    },
-    {
-      icon: "🆘",
-      title: "24/7 Support",
-      description: "Round-the-clock professional support and emergency care to ensure peace of mind for your family.",
-      features: ["24/7 availability", "Emergency care", "Professional support", "Peace of mind"]
+      icon: "👶",
+      title: "സുരക്ഷിത പരിചരണം",
+      description: "അമ്മക്കും കുഞ്ഞിനും ഒരുപോലെ സുരക്ഷിതവും കരുതലോടെയുള്ള പരിചരണം",
+      features: ["24/7 മേൽനോട്ടം", "അവശ്യ സഹായം എപ്പോഴും", "ശുചിത്വ മാനദണ്ഡങ്ങൾ", "കുടുംബ സൗഹൃദ അന്തരീക്ഷം"]
     }
   ];
 
@@ -65,10 +59,30 @@ const Services = () => {
     <section id="services" className="services">
       <div className="container">
         <div className="services-header">
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title">Services</h2>
           <p className="section-subtitle">
-            Comprehensive postnatal care designed for your family's unique needs
+            മാതൃത്വം ഇനി സുഖകരം — ധാരിത്രി കൂടെയുണ്ട്
           </p>
+        </div>
+
+        <div className={`services-intro ${isVisible ? 'animate-fadeInUp' : ''}`}>
+          <p>
+            കുട്ടുകൂടാനൊരുങ്ങുന്ന ഓരോ മാതാവിനും പ്രസവാനന്തര കാലഘട്ടം വളരെ പ്രധാനമാണ്. ഈ സമയത്ത്
+            ശാരീരികമായും മാനസികമായും ആവശ്യമായ വിശ്രമവും പരിചരണവും ലഭിക്കേണ്ടത് അത്യാവശ്യമാണ്.
+            ധാരിത്രി പോസ്റ്റ്നാറ്റൽ കെയർ സെന്റർ ഈ ആവശ്യത്തിനായി തന്നെ രൂപകൽപ്പന ചെയ്തതാണ്.
+          </p>
+          <p>
+            അമ്മമാരുടെ ആരോഗ്യംയും മനസ്സിന്റെ സമാധാനവും ഉറപ്പാക്കുന്നതിനായി ആയുർവേദശാസ്ത്രത്തിന്റെ അടിസ്ഥാനത്തിൽ
+            പ്രത്യേക പരിചരണ രീതികളാണ് ഇവിടെ സ്വീകരിക്കുന്നത്. പരിചയസമ്പന്നരായ വിദഗ്ധർ നയിക്കുന്ന ചികിത്സയും
+            തൈലം മസാജും വഴി ശരീരത്തിനും മനസ്സിനും പുനരുജ്ജീവനം നൽകുകയാണ് ഞങ്ങളുടെ ലക്ഷ്യം.
+          </p>
+          <p>
+            ഇതിലൂടെ അമ്മമാർക്ക് പൂർണ്ണമായ വിശ്രമം, ആരോഗ്യവും, ആത്മവിശ്വാസവും ലഭ്യമാക്കുന്നു.
+          </p>
+
+          <div className="services-highlights">
+            <h4>സേവനങ്ങളുടെ പ്രത്യേകതകൾ</h4>
+          </div>
         </div>
         
         <div className={`services-grid ${isVisible ? 'animate-fadeInUp' : ''}`}>
@@ -88,18 +102,8 @@ const Services = () => {
                   <li key={featureIndex}>{feature}</li>
                 ))}
               </ul>
-              <button className="service-btn">Learn More</button>
             </div>
           ))}
-        </div>
-        
-        <div className={`services-cta ${isVisible ? 'animate-fadeInUp' : ''}`}>
-          <h3>Ready to Experience Our Care?</h3>
-          <p>Contact us today to discuss your family's specific needs and book your stay.</p>
-          <div className="cta-buttons">
-            <button className="btn">Book Consultation</button>
-            <button className="btn btn-outline">View Packages</button>
-          </div>
         </div>
       </div>
     </section>

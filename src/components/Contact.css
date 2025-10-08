@@ -59,6 +59,8 @@
   box-shadow: 0 5px 20px rgba(233, 30, 99, 0.1);
   margin-bottom: 20px;
   transition: transform 0.3s ease;
+  text-align: center; /* center text */
+  justify-content: center; /* center layout */
 }
 
 .info-card:hover {
@@ -214,8 +216,6 @@
   
   .info-icon {
     font-size: 1.5rem;
-    width: 50px;
-    height: 50px;
   }
   
   .info-content h4 {
