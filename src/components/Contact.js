@@ -51,29 +51,6 @@ const Contact = () => {
     });
   };
 
-  const contactInfo = [
-    {
-      icon: "📍",
-      title: "Address",
-      details: "K.Puram, Puthentheru, Tanur, Malappuram, 676307"
-    },
-  {
-    icon: "📞",
-    title: "Phone",
-    details: "+91 7034187123, +91 9744517475"
-    },
-  {
-    icon: "✉️",
-    title: "Email",
-    details: "dharithripostnatalcare@gmail.com"
-    },
-  {
-    icon: "🕒",
-    title: "Hours",
-    details: "24/7 Care Available"
-    }
-  ];
-
 return (
   <section id="contact" className="contact">
     <div className="container">
@@ -93,15 +70,18 @@ return (
           </p>
 
           <div className="info-cards">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="info-card">
-                <div className="info-icon">{info.icon}</div>
-                <div className="info-content">
-                  <h4>{info.title}</h4>
-                  <p>{info.details}</p>
-                </div>
+            <div className="info-card">
+              <div className="info-content">
+                <h4>Address</h4>
+                <p>K.Puram, Puthentheru, Tanur, Malappuram, 676307</p>
+                <h4 style={{ marginTop: 12 }}>Phone</h4>
+                <p>+91 7034187123, +91 9744517475</p>
+                <h4 style={{ marginTop: 12 }}>Email</h4>
+                <p>dharithripostnatalcare@gmail.com</p>
+                <h4 style={{ marginTop: 12 }}>Hours</h4>
+                <p>24/7 Care Available</p>
               </div>
-            ))}
+            </div>
           </div>
 
           <div className="social-links">
@@ -118,7 +98,7 @@ return (
         <div className={`contact-form-container ${isVisible ? 'animate-fadeInRight' : ''}`}>
           <form className="contact-form" onSubmit={handleSubmit}>
             <h3>Send us a Message</h3>
-
+            
             <div className="form-group">
               <label htmlFor="name">Full Name *</label>
               <input
