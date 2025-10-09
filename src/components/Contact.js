@@ -87,10 +87,16 @@ return (
           <div className="social-links">
             <h4>Follow Us</h4>
             <div className="social-icons">
-              <a href="#" className="social-link">📘</a>
-              <a href="#" className="social-link">📷</a>
-              <a href="#" className="social-link">🐦</a>
-              <a href="#" className="social-link">💼</a>
+              <a href="#" className="social-link" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 12.06C22 6.55 17.52 2.06 12 2.06S2 6.55 2 12.06c0 4.97 3.66 9.09 8.44 9.94v-7.03H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34v7.03C18.34 21.15 22 17.03 22 12.06z" fill="currentColor"/>
+                </svg>
+              </a>
+              <a href="#" className="social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-1.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" fill="currentColor"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -124,43 +130,25 @@ return (
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
+              <label htmlFor="phone">Phone Number *</label>
               <input
                 type="tel"
                 id="phone"
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
+                required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="service">Service Interested In</label>
-              <select
-                id="service"
-                name="service"
-                value={formData.service}
-                onChange={handleInputChange}
-              >
-                <option value="">Select a service</option>
-                <option value="newborn-care">Newborn Care</option>
-                <option value="mother-recovery">Mother's Recovery</option>
-                <option value="feeding-support">Feeding Support</option>
-                <option value="family-bonding">Family Bonding</option>
-                <option value="education">Education & Training</option>
-                <option value="consultation">General Consultation</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message *</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
                 value={formData.message}
                 onChange={handleInputChange}
-                required
                 placeholder="Tell us about your needs and how we can help..."
               ></textarea>
             </div>
