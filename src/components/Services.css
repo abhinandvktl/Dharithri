@@ -30,7 +30,7 @@
   color: #555;
   font-size: 1.05rem;
   line-height: 1.9;
-  text-align: center; /* ensure left alignment */
+  text-align: center; /* keep intro centered */
 }
 
 .services-highlights {
@@ -39,12 +39,12 @@
   background: transparent;
   border: none;
   border-radius: 0;
-  text-align: left; /* left align heading too */
 }
 
 .services-highlights h4 {
   margin: 0 0 10px 0;
   color: #e91e63;
+  text-align: center;
 }
 
 .services-highlights ul {

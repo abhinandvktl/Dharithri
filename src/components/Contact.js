@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,18 +40,44 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will contact you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      service: ''
-    });
+    setIsLoading(true);
+    setSubmitStatus(null);
+
+    try {
+      // EmailJS configuration - Replace these with your actual values
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'your_service_id';
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'your_template_id';
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
+      // Template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        service: formData.service || 'General Inquiry',
+        to_email: process.env.REACT_APP_RECIPIENT_EMAIL
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        service: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
 return (
@@ -105,6 +134,18 @@ return (
           <form className="contact-form" onSubmit={handleSubmit}>
             <h3>Send us a Message</h3>
             
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="form-status success">
+                <p>✅ Thank you for your message! We will contact you soon.</p>
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="form-status error">
+                <p>❌ Sorry, there was an error sending your message. Please try again or contact us directly.</p>
+              </div>
+            )}
+            
             <div className="form-group">
               <label htmlFor="name">Full Name *</label>
               <input
@@ -153,8 +194,19 @@ return (
               ></textarea>
             </div>
 
-            <button type="submit" className="btn form-submit">
-              Send Message
+            <button 
+              type="submit" 
+              className="btn form-submit"
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>
+                  <span className="spinner"></span>
+                  Sending...
+                </>
+              ) : (
+                'Send Message'
+              )}
             </button>
           </form>
         </div>
