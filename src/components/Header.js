@@ -45,7 +45,6 @@ const Header = () => {
           </nav>
 
           <div className="nav-actions">
-            <button className="btn btn-outline">Book Now</button>
             <button 
               className="mobile-menu-toggle"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

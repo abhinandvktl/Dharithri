@@ -134,17 +134,7 @@ return (
           <form className="contact-form" onSubmit={handleSubmit}>
             <h3>Send us a Message</h3>
             
-            {/* Status Messages */}
-            {submitStatus === 'success' && (
-              <div className="form-status success">
-                <p>✅ Thank you for your message! We will contact you soon.</p>
-              </div>
-            )}
-            {submitStatus === 'error' && (
-              <div className="form-status error">
-                <p>❌ Sorry, there was an error sending your message. Please try again or contact us directly.</p>
-              </div>
-            )}
+            
             
             <div className="form-group">
               <label htmlFor="name">Full Name *</label>
@@ -208,6 +198,20 @@ return (
                 'Send Message'
               )}
             </button>
+            
+
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="form-status success">
+                <p>✅ Thank you for your message! We will contact you soon.</p>
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="form-status error">
+                <p>❌ Sorry, there was an error sending your message. Please try again or contact us directly.</p>
+              </div>
+            )}
+
           </form>
         </div>
       </div>
